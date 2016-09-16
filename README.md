@@ -5,8 +5,7 @@ This project is the 4th project of Front-End Web Developer Nanodegree.
 
 ## How to build and run the project
 ### Requirement
-* npm 3.10.7
-
+* node-6.6.0
 
 1. install gulp command line utility
 ```sh
