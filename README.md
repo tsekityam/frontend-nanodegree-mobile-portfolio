@@ -6,6 +6,7 @@ This project is the 4th project of Front-End Web Developer Nanodegree.
 ## How to build and run the project
 ### Requirement
 * node-6.6.0
+* imagemagick-6.9.5-9_2
 
 1. install gulp command line utility
 ```sh
@@ -17,9 +18,9 @@ $ npm install gulp-cli
 $ npm init
 ```
 
-3. install gulp in project directory
+3. install gulp and plugins in project directory
 ``` sh
-npm install gulp
+npm install gulp gulp-imagemin imagemin-pngquant gulp-image-resize gulp-rename
 ```
 
 4. run gulp
@@ -31,3 +32,7 @@ Now the project is built from source and the output is available in `docs/`, ope
 ## What have been changed
 
 1. introduce [Gulp](http://gulpjs.com) to the project
+
+2. optimize images
+  * resize pizzeria image used in `index.html`
+  * compress images
