@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>document.documentElement.className += ' wf-loading';</script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content=" FILL ME IN ">
@@ -23,8 +25,20 @@
     </script>
     <script async src="http://www.google-analytics.com/analytics.js"></script>
     <script async src="js/perfmatters.js"></script>
-  </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+     WebFontConfig = {
+        google: { families: ['Open+Sans:400,700'] },
+        timeout: 2000
+     };
 
+     (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+        s.parentNode.insertBefore(wf, s);
+     })(document);
+  </script>
+  </head>
   <body>
     <header>
       <a href="/"><img src="img/profilepic.jpg"></a>
