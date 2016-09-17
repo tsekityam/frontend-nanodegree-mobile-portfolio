@@ -41,16 +41,16 @@ Now the project is built from source and the output is available in `docs/`, ope
   * resize pizzeria image used in `index.html`
   * compress images
 
-   related commits: [cabe2f3](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/cabe2f3b929987f4236ee23f95cb2e7d7f2307c7)
+  related commits: [cabe2f3](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/cabe2f3b929987f4236ee23f95cb2e7d7f2307c7)
 
 1. remove Render-Blocking JavaScript
   * load non essential JavaScript asynchronously
 
-   related commits: [298d823](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/298d823a72e84cc60a6a84d094e110e0bbeb43f4)
+  related commits: [298d823](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/298d823a72e84cc60a6a84d094e110e0bbeb43f4)
 
 1. use CSS media queries
 
-    related commits: [1d77fb7](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/1d77fb72e4073515a59fc7a3c3955087e26e71f2)
+  related commits: [1d77fb7](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/1d77fb72e4073515a59fc7a3c3955087e26e71f2)
 
 1. optimize CSS delivery
   * inline CSS files
@@ -67,7 +67,15 @@ Now the project is built from source and the output is available in `docs/`, ope
   * simplify the way of getting the new pizza size
 
   related commits:
-   [259a13](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/259a13054cbf2de17132287b305be703bb945577),  [ec2e243](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/ec2e243546faf5ebb6be7095b343b43e2c491635),  [8d6e79f](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/8d6e79f4333c87a334447aad645b18e0800fa26e)
+   [259a130](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/259a13054cbf2de17132287b305be703bb945577),  [ec2e243](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/ec2e243546faf5ebb6be7095b343b43e2c491635),  [8d6e79f](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/8d6e79f4333c87a334447aad645b18e0800fa26e)
+
+1. otimizing JavaScript code
+  * avoid initialization in a loop
+  * avoid unnecessary initialization
+  * use `document.getElementById()` instead of `Document.querySelector()`
+  * use `Document.getElementsByClassName()` instead of `Document.querySelector()`
+
+  related commits: [1fb4b1a](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/1fb4b1a2af5254f69de5650e851a6630566426bd), [46c6845](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/46c68455b8ca347bb4ca314f16812f171e5f08ed), [8cbd390](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/8cbd390faa44fc08eee16f418bcb92d956b92715), [32317dc](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/32317dc7bfa26890df5acbba96dbe7bab4d61e0d), [faf3609](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/faf36096b745ef2f41b73543c282f1d7ebf17b08), [4ffeaa4](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/4ffeaa44076646048c2b688ce769f3ac30892874)
 
 ## Reference
 [Web Fundamentals ](https://developers.google.com/web/fundamentals/?hl=en)
