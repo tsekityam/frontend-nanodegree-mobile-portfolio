@@ -3,6 +3,7 @@ var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var imageResize = require('gulp-image-resize');
 var rename = require("gulp-rename");
+var uglify = require('gulp-uglify');
 
 gulp.task('default', ['copy']);
 
@@ -35,6 +36,10 @@ gulp.task('copy-js', function() {
 
 gulp.task('copy-views-js', function() {
   gulp.src('./views/js/*.js')
+  .pipe(uglify())
+  .pipe(rename({
+    suffix: '-min'
+  }))
   .pipe(gulp.dest('./docs/views/js'));
 });
 

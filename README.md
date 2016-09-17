@@ -20,7 +20,7 @@ $ npm init
 
 3. install gulp and plugins in project directory
 ``` sh
-npm install gulp gulp-imagemin imagemin-pngquant gulp-image-resize gulp-rename
+npm install gulp gulp-imagemin imagemin-pngquant gulp-image-resize gulp-rename gulp-uglify
 ```
 
 4. run gulp
@@ -42,3 +42,6 @@ Now the project is built from source and the output is available in `docs/`, ope
 
 4. optimize CSS delivery
   * inline CSS files
+
+5. minify JavaScript
+  * minify JavaScript being used in `pizza.html`
