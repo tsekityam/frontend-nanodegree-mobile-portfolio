@@ -547,8 +547,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var s = 256;
 
 // extract commmon elements from the loop, in order to reduce number of initializations
-  var elem = document.createElement('img');
+  var elem;
   for (var i = 0; i < cols * rows; i++) {
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = pizzaHeight + "px";
