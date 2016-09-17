@@ -64,5 +64,5 @@ Now the project is built from source and the output is available in `docs/`, ope
   * avoid reading a constant value in a loop
   * simplify the way of getting the new pizza size
 
-      related commit:
-       [259a13](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/259a13054cbf2de17132287b305be703bb945577),  [ec2e243](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/ec2e243546faf5ebb6be7095b343b43e2c491635),  [8d6e79f](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/8d6e79f4333c87a334447aad645b18e0800fa26e)
+  related commit:
+   [259a13](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/259a13054cbf2de17132287b305be703bb945577),  [ec2e243](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/ec2e243546faf5ebb6be7095b343b43e2c491635),  [8d6e79f](https://github.com/tsekityam/frontend-nanodegree-mobile-portfolio/commit/8d6e79f4333c87a334447aad645b18e0800fa26e)
