@@ -39,3 +39,6 @@ Now the project is built from source and the output is available in `docs/`, ope
 
 3. remove Render-Blocking JavaScript
   * load non essential JavaScript asynchronously
+
+4. optimize CSS delivery
+  * inline CSS files
