@@ -6,15 +6,7 @@ html {
   -webkit-text-size-adjust: none;
 }
 body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; }
-p, a, .hero { font-family: 'Open Sans', sans-serif; color: #333; }
-
-.wf-loading * p, .wf-loading * a, .wf-loading * .hero  { visibility: hidden; }
-
-.wf-loading * a img { visibility: visible; }
-
-.wf-opensans-n4-active * p, .wf-opensans-n4-active * a :not(img), .wf-opensans-n4-inactive * p, .wf-opensans-n4-inactive * a :not(img) { visibility: visible; }
-
-.wf-opensans-n4-active.wf-opensans-n7-active * .hero, .wf-opensans-n4-inactive.wf-opensans-n7-inactive * .hero { visibility: visible; }
+body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; color: #333; }
 
 a { color: #12C; }
 a:visited { color: #61C; }
