@@ -523,8 +523,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var rows = Math.ceil(screenHeight / pizzaHeight);
 
   var s = 256;
+
+  var elem = document.createElement('img');
   for (var i = 0; i < cols * rows; i++) {
-    var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = pizzaHeight + "px";
