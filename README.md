@@ -36,3 +36,6 @@ Now the project is built from source and the output is available in `docs/`, ope
 2. optimize images
   * resize pizzeria image used in `index.html`
   * compress images
+
+3. remove Render-Blocking JavaScript
+  * load non essential JavaScript asynchronously
