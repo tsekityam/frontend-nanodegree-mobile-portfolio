@@ -403,6 +403,7 @@ var resizePizzas = function(size) {
   window.performance.mark("mark_start_resize");   // User Timing API function
 
   // Changes the value for the size of the pizza above the slider
+  // a faster api is being used to select element
   function changeSliderLabel(size) {
     switch(size) {
       case "1":
@@ -440,6 +441,13 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
+    // extract commmon elements from the loop, in order to reduce number of initializations
+    // and read write loop
+    // originally, we get the new width in pixel via calculation, however, the
+    // result is related to the parent width in percentage. In order to avoid
+    // calculation in JavaScript, now we set the width of pizzas in percentage too,
+    // and let the browser handle the rest
+    // a faster api is being used to select elements
     var newwidth = determineNewWidth(size);
     var pizzas = document.getElementsByClassName("randomPizzaContainer");
     var pizzasLength = pizzas.length;
@@ -460,6 +468,7 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
+// extract commmon elements from the loop, in order to reduce number of initializations
 var pizzasDiv = document.getElementById("randomPizzas");
 for (var i = 2; i < 100; i++) {
   pizzasDiv.appendChild(pizzaElementGenerator(i));
@@ -493,6 +502,9 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
+  // extract commmon elements from the loop, in order to reduce number of initializations
+  // and read write loop
+  // a faster api is being used to select elements
   var scrollTop = document.body.scrollTop;
   var items = document.getElementsByClassName('mover');
   var phase;
@@ -516,6 +528,14 @@ window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
+
+  // the number of pizzas in background is set to 200, not all of them will
+  // be visible, or the number of pizzas may not be enough to fill the screen.
+  // now we create pizzas that fit the screen exactly. In most of case, the
+  // number of pizzas created will be smaller than before. If the
+  // screen is very very large, then the number of pizzas created may be more
+  // than 200, which means worse then before. Hoever, the screen will be filled
+  // by pizzas.
   var screenWidth = window.screen.width;
   var pizzaWidth = 73.333;
   var cols = Math.ceil(screenWidth / pizzaWidth);
@@ -526,6 +546,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var s = 256;
 
+// extract commmon elements from the loop, in order to reduce number of initializations
   var elem = document.createElement('img');
   for (var i = 0; i < cols * rows; i++) {
     elem.className = 'mover';
