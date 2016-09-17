@@ -45,3 +45,7 @@ Now the project is built from source and the output is available in `docs/`, ope
 
 5. minify JavaScript
   * minify JavaScript being used in `pizza.html`
+
+6. avoid forced synchronous layouts
+  * avoid reading a constant value in a loop
+  * simplify the way we get the new pizza size
