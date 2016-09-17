@@ -10,32 +10,32 @@ gulp.task('default', ['copy']);
 gulp.task('copy', ['copy-html', 'copy-views-html', 'copy-css', 'copy-views-css', 'copy-js', 'copy-views-js', 'copy-img', 'copy-and-resize-views-images']);
 
 gulp.task('copy-html', function() {
-  gulp.src('./*.html')
+  gulp.src('./src/*.html')
   .pipe(gulp.dest('./docs/'));
 });
 
 gulp.task('copy-views-html', function() {
-  gulp.src('./views/*.html')
+  gulp.src('./src/views/*.html')
   .pipe(gulp.dest('./docs/views/'));
 });
 
 gulp.task('copy-css', function() {
-  gulp.src('./css/*.css')
+  gulp.src('./src/css/*.css')
   .pipe(gulp.dest('./docs/css/'));
 });
 
 gulp.task('copy-views-css', function() {
-  gulp.src('./views/css/*.css')
+  gulp.src('./src/views/css/*.css')
   .pipe(gulp.dest('./docs/views/css/'));
 });
 
 gulp.task('copy-js', function() {
-  gulp.src('./js/*.js')
+  gulp.src('./src/js/*.js')
   .pipe(gulp.dest('./docs/js/'));
 });
 
 gulp.task('copy-views-js', function() {
-  gulp.src('./views/js/*.js')
+  gulp.src('./src/views/js/*.js')
   .pipe(uglify())
   .pipe(rename({
     suffix: '-min'
@@ -44,7 +44,7 @@ gulp.task('copy-views-js', function() {
 });
 
 gulp.task('copy-img', function() {
-  gulp.src('img/*')
+  gulp.src('./src/img/*')
   .pipe(imagemin({
     progressive: true,
     use: [pngquant()]
@@ -53,7 +53,7 @@ gulp.task('copy-img', function() {
 });
 
 gulp.task('copy-views-images', function(cb) {
-  return gulp.src('views/images/*')
+  return gulp.src('./src/views/images/*')
   .pipe(imagemin({
     progressive: true,
     use: [pngquant()]
